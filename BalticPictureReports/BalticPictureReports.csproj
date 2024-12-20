@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA3B45A8-FAE9-4507-98DD-27B01A22F092}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BalticPictureReports</RootNamespace>
+    <AssemblyName>BalticPictureReports</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ScadaData">
+      <HintPath>..\..\..\..\..\..\SCADA\ScadaAdmin\ScadaData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuhlerMillstar3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuhlerMillstar3.Designer.cs">
+      <DependentUpon>BuhlerMillstar3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuhlerMillstar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuhlerMillstar2.Designer.cs">
+      <DependentUpon>BuhlerMillstar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ConnectionStringMSSQL.cs" />
+    <Compile Include="Classes\DirectoryFile.cs" />
+    <Compile Include="Classes\Log.cs" />
+    <Compile Include="Classes\RepositoryConfigLimits.cs" />
+    <Compile Include="Classes\RepositoryMinuteData.cs" />
+    <Compile Include="Interfaces\IConnectDb.cs" />
+    <Compile Include="Interfaces\IRepositore.cs" />
+    <Compile Include="NewTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BuhlerMillstar3.resx">
+      <DependentUpon>BuhlerMillstar3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuhlerMillstar2.resx">
+      <DependentUpon>BuhlerMillstar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Backup\BaltikaSamara" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_Circle_34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange_Circle_34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red_Circle_34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow_Circle_34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green_gray_34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вверх красная.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вверх оранж.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вверх зелёная.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вниз зелёная.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вниз красная.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вниз оранж.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Серый квадрат заплатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Зелёный квадрат заплатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Жёлтый квадрат заплатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Оранжевый квадрат заплатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Красный квадрат заплатка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стрелка вниз синяя.png" />
+    <None Include="Resources\Green_blue_NEW_34x34.png" />
+    <None Include="Resources\Синий квадрат заплатка.png" />
+    <None Include="Resources\Барабан сушки дробины.png" />
+    <None Include="Resources\Барабан сушки дрожжей.png" />
+    <None Include="Resources\Гранулятор.png" />
+    <None Include="Resources\Пресс-шнек.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Кинематичесая схема вертикальный.png" />
+    <None Include="Resources\Millstar.png" />
+    <Content Include="FileResourses\db_name.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Стрелка вверх жёлтая.png" />
+    <None Include="Resources\Стрелка вверх синяя.png" />
+    <Content Include="Resources\Стрелка вниз жёлтая.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
